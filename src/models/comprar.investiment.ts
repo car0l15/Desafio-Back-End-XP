@@ -22,4 +22,11 @@ const verifyQuantity = async (codAtivo: number, qtAtivo: number) => {
   return 'quantidade suficiente';
 };
 
-export default { getAll, verifyQuantity };
+const buyAtivos = async (Investimento: Investiment) => {
+  const [rows] = await connection.execute(`
+ INSERT INTO XpIncSchema.investimento (codCliente, codAtivo, qtAtivo) VALUES (?,?,?)
+ `, [Investimento.codCliente, Investimento.codAtivo, Investimento.qtAtivo]);
+  return rows;
+};
+
+export default { getAll, verifyQuantity, buyAtivos };

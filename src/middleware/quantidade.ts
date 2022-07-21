@@ -7,7 +7,7 @@ const quantidade = async (req: Request, res: Response, next: NextFunction) => {
 
   const msg = 'a quantidade de ações requeridas é maior que a disponível na carteira';
 
-  if (String(message) === 'quantidade indisponivel') {
+  if (String(message) === 'quantidade indisponível') {
     return res.status(404).json({ message: msg });
   }
 
