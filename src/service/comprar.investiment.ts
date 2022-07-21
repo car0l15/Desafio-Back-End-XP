@@ -5,4 +5,9 @@ const getAll = async () => {
   return getAtivos;
 };
 
-export default { getAll };
+const verifyQuantity = async (codAtivo: number, qtAtivo: number) => {
+  const verify = await comprarInvestiment.verifyQuantity(codAtivo, qtAtivo);
+  return verify;
+};
+
+export default { getAll, verifyQuantity };
