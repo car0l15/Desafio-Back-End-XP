@@ -1,5 +1,5 @@
 export default interface Investiment {
-  codCliente: number;
-  codAtivo: number;
+  codCliente?: number;
+  codAtivo?: number;
   qtAtivo: number;
 }

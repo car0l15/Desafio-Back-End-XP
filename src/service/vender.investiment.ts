@@ -7,6 +7,21 @@ const getAllInvestiments = async () => {
   return getAll;
 };
 
+const verify = async (codCliente: number, codAtivo: number, qtAtivo: number) => {
+  await venderInvestiment.verifyQuantity(
+    codCliente,
+    codAtivo,
+    qtAtivo,
+  );
+
+  return {
+    codCliente,
+    codAtivo,
+    qtAtivo,
+  };
+};
+
 export default {
   getAllInvestiments,
+  verify,
 };

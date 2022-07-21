@@ -3,7 +3,7 @@ import investimentService from '../service/comprar.investiment';
 
 const quantidade = async (req: Request, res: Response, next: NextFunction) => {
   const { codAtivo, qtAtivo } = req.body;
-  const message = await investimentService.verifyQuantity(Number(codAtivo), Number(qtAtivo));
+  const message = await investimentService.verifyQuantity(codAtivo, qtAtivo);
 
   const msg = 'a quantidade de ações requeridas é maior que a disponível na carteira';
 
