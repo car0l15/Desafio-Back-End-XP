@@ -7,12 +7,21 @@ const getAll = async () => {
 };
 
 const verifyQuantity = async (codAtivo: number, qtAtivo: number) => {
-  const verify = await comprarInvestimentModel.verifyQuantity(codAtivo, qtAtivo);
-  return verify;
+  const quantidade = await comprarInvestimentModel.verifyQuantity(codAtivo, qtAtivo);
+  console.log(quantidade, 'service');
+
+  if (qtAtivo > quantidade) {
+    return 'quantidade indisponível';
+  }
+  return quantidade;
 };
 
-const buyAtivos = async (investimento: Investiment) => {
-  await comprarInvestimentModel.buyAtivos(investimento);
+// const verifyAssetsByClients = () => {
+
+// }
+
+const buyAssets = async (investimento: Investiment) => {
+  await comprarInvestimentModel.buyAssets(investimento);
 
   return {
     codCliente: investimento.codCliente,
@@ -21,4 +30,4 @@ const buyAtivos = async (investimento: Investiment) => {
   };
 };
 
-export default { getAll, verifyQuantity, buyAtivos };
+export default { getAll, verifyQuantity, buyAssets };

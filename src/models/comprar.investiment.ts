@@ -15,18 +15,19 @@ const verifyQuantity = async (codAtivo: number, qtAtivo: number) => {
   const qtdAtivosTable = rows as Investiment[];
 
   const quantidade = qtdAtivosTable[0].qtAtivo;
-  if (qtAtivo > quantidade) {
-    return 'quantidade indisponível';
-  }
 
-  return 'quantidade suficiente';
+  console.log(qtAtivo, quantidade, 'model');
+
+  return quantidade;
 };
 
-const buyAtivos = async (Investimento: Investiment) => {
+// const verifyStocksByClients
+
+const buyAssets = async (Investimento: Investiment) => {
   const [rows] = await connection.execute(`
  INSERT INTO XpIncSchema.investimento (codCliente, codAtivo, qtAtivo) VALUES (?,?,?)
  `, [Investimento.codCliente, Investimento.codAtivo, Investimento.qtAtivo]);
   return rows;
 };
 
-export default { getAll, verifyQuantity, buyAtivos };
+export default { getAll, verifyQuantity, buyAssets };

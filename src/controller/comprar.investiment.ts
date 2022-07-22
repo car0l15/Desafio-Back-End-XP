@@ -16,7 +16,7 @@ comprarInvestimentController.post(
   '/comprar',
   middleware.quantidade,
   async (req: Request, res: Response) => {
-    const result = await comprarInvestiment.buyAtivos(req.body);
+    const result = await comprarInvestiment.buyAssets(req.body);
     return res.status(201).json(result);
   },
 );
