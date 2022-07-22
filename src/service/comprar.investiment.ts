@@ -16,9 +16,13 @@ const verifyQuantity = async (codAtivo: number, qtAtivo: number) => {
   return quantidade;
 };
 
-// const verifyAssetsByClients = () => {
+// const verifyAssetsByClients = async () => {
+//   await comprarInvestimentModel.verifyStocksByClients();
 
-// }
+//   return {
+
+//   };
+// };
 
 const buyAssets = async (investimento: Investiment) => {
   await comprarInvestimentModel.buyAssets(investimento);

@@ -21,8 +21,16 @@ const verifyQuantity = async (codAtivo: number, qtAtivo: number) => {
   return quantidade;
 };
 
-// const verifyStocksByClients
+// caso o cliente já tenha ações daquele tipo
+// const verifyStocksByClients = async (codCliente:number, codAtivo: number) => {
+//   const [rows] = await connection.execute(
+//     'SELECT qtAtivo FROM XpIncSchema.cliente_ativos WHERE codCliente=? AND codAtivos=?',
+//     [codCliente, codAtivo],
+//   );
+//   return rows;
+// };
 
+// caso seja a primeira compra do cliente
 const buyAssets = async (Investimento: Investiment) => {
   const [rows] = await connection.execute(`
  INSERT INTO XpIncSchema.investimento (codCliente, codAtivo, qtAtivo) VALUES (?,?,?)
