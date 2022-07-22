@@ -9,7 +9,7 @@ const getAll = async () => {
 
 const quantityAssets = async (codCliente: number, codAtivo: number) => {
   const [rows] = await connection.execute(
-    'SELECT qtAtivo FROM XpIncSchema.investimento WHERE codCliente=? AND codAtivo=?',
+    'SELECT qtAtivo FROM XpIncSchema.cliente_ativos WHERE codCliente=? AND codAtivo=?',
     [codCliente, codAtivo],
   );
   const quantidade = rows as IQtAtivos[];

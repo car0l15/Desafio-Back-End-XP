@@ -34,12 +34,6 @@ const insertAssets = async (codCliente: number, codAtivo: number, qtAtivos: numb
   const qtInsert = await venderInvestiment.insertAssets(codCliente, codAtivo, quantidadeFinal);
 
   return qtInsert;
-
-  // return {
-  //   codCliente,
-  //   codAtivo,
-  //   qtAtivo: qtInsert,
-  // };
 };
 
 export default {
