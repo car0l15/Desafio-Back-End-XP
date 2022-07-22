@@ -15,21 +15,14 @@ const quantityAssets = async (codCliente: number, codAtivo: number, qtAtivo: num
   );
   const quantidade = rows as IQtAtivos[];
 
-  if (quantidade.length < 1) {
-    throw new Error('error ao passar o código da conta do cliente ou do ativo');
-  }
+  return quantidade;
 
-  const qtAtivos = quantidade[0].qtAtivo;
+  //   const [rowsInsert] = await connection.execute(
+  //     'INSERT INTO XpIncSchema.cliente_ativos (codCliente, codAtivo, qtAtivo) VALUES(?, ?, ?)',
+  //     [codCliente, codAtivo, qtAtivos - qtAtivo],
+  //   );
 
-  if (qtAtivo > qtAtivos) {
-    throw new Error('você não possui quantidade suficiente para essa venda');
-  }
-  const [rowsInsert] = await connection.execute(
-    'INSERT INTO XpIncSchema.cliente_ativos (codCliente, codAtivo, qtAtivo) VALUES(?, ?, ?)',
-    [codCliente, codAtivo, qtAtivos - qtAtivo],
-  );
-
-  return rowsInsert;
+//   return rowsInsert;
 };
 export default {
   getAll,

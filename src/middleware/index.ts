@@ -1,3 +1,4 @@
 import quantidade from './quantidade';
+import error from './error';
 
-export default { quantidade };
+export default { quantidade, error };

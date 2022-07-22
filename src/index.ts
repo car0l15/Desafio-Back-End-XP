@@ -1,9 +1,12 @@
 import express from 'express';
 import routes from './routes';
+import middleware from './middleware';
 
 const app = express();
 
 app.use(express.json());
+
+app.use(middleware.error);
 
 app.use(routes);
 

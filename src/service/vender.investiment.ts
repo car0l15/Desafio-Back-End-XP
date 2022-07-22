@@ -8,8 +8,22 @@ const getAllInvestiments = async () => {
 };
 
 const quantityAssets = async (codCliente: number, codAtivo:number, qtAtivo: number) => {
-  const t = await venderInvestiment.quantityAssets(codCliente, codAtivo, qtAtivo);
-  return t;
+  const quantidade = await venderInvestiment.quantityAssets(codCliente, codAtivo, qtAtivo);
+  if (quantidade.length < 1) {
+    throw new Error('error ao passar o código da conta do cliente ou do ativo');
+  }
+
+  const qtAtivos = quantidade[0].qtAtivo;
+
+  if (qtAtivo > qtAtivos) {
+    throw new Error('quantidade excedida');
+  }
+
+  return {
+    codCliente,
+    codAtivo,
+    qtAtivo,
+  };
 };
 
 export default {
