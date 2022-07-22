@@ -8,7 +8,7 @@ const getAllInvestiments = async () => {
 };
 
 const quantityAssets = async (codCliente: number, codAtivo:number, qtAtivo: number) => {
-  const quantidade = await venderInvestiment.quantityAssets(codCliente, codAtivo, qtAtivo);
+  const quantidade = await venderInvestiment.quantityAssets(codCliente, codAtivo);
   if (quantidade.length < 1) {
     return 'error do código do ativou ou cliente';
   }
@@ -26,7 +26,24 @@ const quantityAssets = async (codCliente: number, codAtivo:number, qtAtivo: numb
   };
 };
 
+const insertAssets = async (codCliente: number, codAtivo: number, qtAtivos: number) => {
+  const quantidadeTable = await venderInvestiment.quantityAssets(codCliente, codAtivo);
+
+  const quantidadeFinal = quantidadeTable[0].qtAtivo - qtAtivos;
+
+  const qtInsert = await venderInvestiment.insertAssets(codCliente, codAtivo, quantidadeFinal);
+
+  return qtInsert;
+
+  // return {
+  //   codCliente,
+  //   codAtivo,
+  //   qtAtivo: qtInsert,
+  // };
+};
+
 export default {
   getAllInvestiments,
   quantityAssets,
+  insertAssets,
 };

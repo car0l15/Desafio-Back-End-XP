@@ -8,7 +8,7 @@ const quantidadeVendas = async (req: Request, res: Response, next: NextFunction)
 
   const msg = 'você não possui quantidade de ativos suficiente para completar esta venda';
 
-  const msg2 = 'erro ao passar o código da conta do cliente ou código do ativo';
+  const msg2 = 'erro ao passar o código da conta ou código do ativo';
 
   if (result === 'error do código do ativou ou cliente') {
     return res.status(404).json({ mensage: msg2 });
