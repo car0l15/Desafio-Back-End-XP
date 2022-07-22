@@ -7,6 +7,12 @@ const getAllInvestiments = async () => {
   return getAll;
 };
 
+const quantityAssets = async (codCliente: number, codAtivo:number, qtAtivo: number) => {
+  const t = await venderInvestiment.quantityAssets(codCliente, codAtivo, qtAtivo);
+  return t;
+};
+
 export default {
   getAllInvestiments,
+  quantityAssets,
 };

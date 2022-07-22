@@ -9,4 +9,10 @@ venderInvestimentController.get('/vender', async (req: Request, res: Response) =
   return res.status(200).json(result);
 });
 
+venderInvestimentController.post('/vender', async (req: Request, res: Response) => {
+  const { codCliente, codAtivo, qtAtivo } = req.body;
+  const result = await venderInvestiment.quantityAssets(codCliente, codAtivo, qtAtivo);
+  return res.status(201).json(result);
+});
+
 export default venderInvestimentController;
