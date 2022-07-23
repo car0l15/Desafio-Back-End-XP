@@ -1,3 +1,4 @@
+import IAtivo from '../interface/IAtivo';
 import connection from './connection';
 
 const getClientById = async (codCliente:number) => {
@@ -13,7 +14,9 @@ const getAssetsById = async (codAtivo: number) => {
   const [rows] = await connection.execute(`
     SELECT * FROM XpIncSchema.ativos WHERE codAtivo=? 
     `, [codAtivo]);
-  return rows;
+  const teste = rows as IAtivo[];
+
+  return teste;
 };
 
 export default {
