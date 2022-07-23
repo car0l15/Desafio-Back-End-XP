@@ -4,13 +4,15 @@ import ativosModel from '../src/models/ativos.model';
 
 // eslint-disable-next-line max-lines-per-function
 describe('Buscando ativos pelo id', () => {
-  describe('em caso de sucesso na busca pelo DB', () => {
+  describe('Em caso de sucesso na busca pelo DB', () => {
     const ativos = [{
-      codAtivo: 1,
+      codAtivo: 12,
       tipo: 'CDB',
       valor: 12.00,
       qtAtivo: 400,
-    }];
+    },
+    ];
+
     before(() => {
       sinon.stub(ativosModel, 'getAssetsById').resolves(ativos);
     });
@@ -38,4 +40,39 @@ describe('Buscando ativos pelo id', () => {
     );
   });
 });
-//   (UserRepository.prototype.getAll as sinon.SinonStub).restore();
+
+describe('Buscando os ativos dos clientes por id', async () => {
+  describe('Em caso de sucesso', async () => {
+    const cliente = [{
+      codCliente: 1,
+      codAtivo: 3,
+      qtAtivo: 20,
+      valor: 11.40
+    }];
+
+    before(() => {
+      sinon.stub(ativosModel, 'getClientById').resolves(cliente);
+    })
+
+    after(() => {
+      (ativosModel.getClientById as sinon.SinonStub).restore();
+    });
+
+    it('retorna um array que não está vazio', async () => {
+       const result = await ativosModel.getClientById(cliente[0].codCliente);
+       expect(result).to.be.an('array');
+       expect(result).to.be.not.empty;
+    });
+    it('espera que o array tenha um objeto dentro da sua estrutura', async () => {
+      const result = await ativosModel.getClientById(cliente[0].codCliente);
+      expect(result[0]).to.be.an('object');
+    });
+
+    it('espera que o objeto tenha as seguintes chaves "codCliente", "codAtivo", "qtAtivo", "valor" ', 
+    async () => {
+      const result = await ativosModel.getClientById(cliente[0].codCliente);
+      expect(result[0]).to.include.all.keys('codAtivo', 'codCliente', 'qtAtivo', 'valor');
+
+    })
+  })
+})

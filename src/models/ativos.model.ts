@@ -1,4 +1,5 @@
 import IAtivo from '../interface/IAtivo';
+import IClienteAtivo from '../interface/IClienteAtivo';
 import connection from './connection';
 
 const getClientById = async (codCliente:number) => {
@@ -7,16 +8,19 @@ const getClientById = async (codCliente:number) => {
         INNER join XpIncSchema.cliente_ativos AS ca
         ON ca.codAtivo = a.codAtivo
         WHERE ca.codCliente=?`, [codCliente]);
-  return rows;
+
+  const rowsType = rows as IClienteAtivo[];
+
+  return rowsType;
 };
 
 const getAssetsById = async (codAtivo: number) => {
   const [rows] = await connection.execute(`
     SELECT * FROM XpIncSchema.ativos WHERE codAtivo=? 
     `, [codAtivo]);
-  const teste = rows as IAtivo[];
+  const rowsType = rows as IAtivo[];
 
-  return teste;
+  return rowsType;
 };
 
 export default {
