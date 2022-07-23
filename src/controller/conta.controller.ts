@@ -20,4 +20,10 @@ contaController.post(
   },
 );
 
+contaController.get('/:id', async (req: Request, res: Response) => {
+  const { id } = req.params;
+  const result = await contaService.getContaById(Number(id));
+  return res.status(200).json(result[0]);
+});
+
 export default contaController;

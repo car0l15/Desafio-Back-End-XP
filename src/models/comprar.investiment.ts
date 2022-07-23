@@ -21,8 +21,6 @@ const verifyQuantity = async (codAtivo: number, qtAtivo: number) => {
   return quantidade;
 };
 
-// fazer uma função para verificar o codCliente
-
 const buyAssets = async (Investimento: Investiment) => {
   const [rows] = await connection.execute(`
  INSERT INTO XpIncSchema.cliente_ativos (codCliente, codAtivo, qtAtivo) VALUES (?,?,?)

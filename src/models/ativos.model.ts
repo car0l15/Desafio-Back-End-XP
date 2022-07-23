@@ -5,7 +5,7 @@ const getClientById = async (codCliente:number) => {
        SELECT ca.codCliente, ca.codAtivo, ca.qtAtivo, a.valor FROM XpIncSchema.ativos  AS a
         INNER join XpIncSchema.cliente_ativos AS ca
         ON ca.codAtivo = a.codAtivo
-        WHERE ca.codCliente=? `, [codCliente]);
+        WHERE ca.codCliente=?`, [codCliente]);
   return rows;
 };
 

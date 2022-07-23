@@ -10,7 +10,7 @@ const getAll = async () => {
 const quantityAssets = async (codCliente: number, codAtivo: number) => {
   const [rows] = await connection.execute(
     `SELECT qtAtivo FROM XpIncSchema.cliente_ativos WHERE codCliente=? AND codAtivo=? 
-    ORDER BY qtAtivo DESC `,
+`,
     [codCliente, codAtivo],
   );
   const quantidade = rows as IQtAtivos[];
@@ -24,7 +24,7 @@ const insertAssets = async (codCliente: number, codAtivo: number, qtAtivos: numb
     [codCliente, codAtivo, qtAtivos],
   );
 
-  console.log(rowsInsert, 'ignora');
+  console.log(rowsInsert);
 
   return {
     codCliente,

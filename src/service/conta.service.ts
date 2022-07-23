@@ -1,3 +1,4 @@
+import IConta from '../interface/conta';
 import contaModel from '../models/conta.model';
 
 const deposito = (codCliente: number, valor: number) => {
@@ -37,4 +38,10 @@ const saque = async (codCliente: number, valor: number) => {
   return insert;
 };
 
-export default { deposito, saldoSaque, saque };
+const getContaById = async (id: number) => {
+  const conta = await contaModel.getContaById(id);
+  const contaAtualizada = conta as IConta[];
+  return contaAtualizada;
+};
+
+export default { deposito, saldoSaque, saque, getContaById };

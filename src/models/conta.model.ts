@@ -31,8 +31,18 @@ const saque = async (codCliente: number, valor: number) => {
   };
 };
 
+const getContaById = async (codCliente: number) => {
+  const [rows] = await connection.execute(`
+   SELECT * FROM XpIncSchema.cliente_conta WHERE codCliente=?
+   `, [codCliente]);
+  const contaAtualizada = rows as IConta[];
+
+  return contaAtualizada;
+};
+
 export default {
   deposito,
   saldoSaque,
   saque,
+  getContaById,
 };
