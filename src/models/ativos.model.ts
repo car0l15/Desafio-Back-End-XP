@@ -12,7 +12,7 @@ const getClientById = async (codCliente:number) => {
 const getAssetsById = async (codAtivo: number) => {
   const [rows] = await connection.execute(`
     SELECT * FROM XpIncSchema.ativos WHERE codAtivo=? 
-    `[codAtivo]);
+    `, [codAtivo]);
   return rows;
 };
 
