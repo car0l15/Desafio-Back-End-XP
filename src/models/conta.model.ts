@@ -5,13 +5,13 @@ const deposito = async (codCliente: number, valor: number) => {
   const [rows] = await connection.execute(`
   INSERT INTO XpIncSchema.cliente_conta (codCliente, saldo) VALUES (?, ?)
     `, [codCliente, valor]);
-
-  return rows;
+  const rowAtualizado = rows as IConta[];
+  return rowAtualizado;
 };
 
 const saldoSaque = async (codCliente:number) => {
   const [rows] = await connection.execute(`SELECT saldo FROM XpIncSchema.cliente_conta 
-    WHERE codCliente=?`, [codCliente]);
+    WHERE codCliente=? ORDER BY saldo DESC`, [codCliente]);
 
   const saldo = rows as IConta[];
 

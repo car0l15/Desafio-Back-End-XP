@@ -1,8 +1,8 @@
 import IConta from '../interface/conta';
 import contaModel from '../models/conta.model';
 
-const deposito = (codCliente: number, valor: number) => {
-  contaModel.deposito(codCliente, valor);
+const deposito = async (codCliente: number, valor: number) => {
+  await contaModel.deposito(codCliente, valor);
   return {
     codCliente,
     valor,

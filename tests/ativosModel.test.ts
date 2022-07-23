@@ -4,7 +4,7 @@ import ativosModel from '../src/models/ativos.model';
 
 // eslint-disable-next-line max-lines-per-function
 describe('Buscando ativos pelo id', () => {
-  describe('Em caso de sucesso na busca pelo DB', () => {
+  describe('Em caso de sucesso na busca', () => {
     const ativos = [{
       codAtivo: 12,
       tipo: 'CDB',
