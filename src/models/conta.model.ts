@@ -11,7 +11,7 @@ const deposito = async (codCliente: number, valor: number) => {
 
 const saldoSaque = async (codCliente:number) => {
   const [rows] = await connection.execute(`SELECT saldo FROM XpIncSchema.cliente_conta 
-    WHERE codCliente=? ORDER BY saldo DESC`, [codCliente]);
+    WHERE codCliente=?`, [codCliente]);
 
   const saldo = rows as IConta[];
 

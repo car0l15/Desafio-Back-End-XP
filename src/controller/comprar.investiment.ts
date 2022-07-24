@@ -14,6 +14,7 @@ comprarInvestimentController.get(
 
 comprarInvestimentController.post(
   '/comprar',
+  middleware.JoiInvestimento,
   middleware.quantidade,
   async (req: Request, res: Response) => {
     const result = await comprarInvestiment.buyAssets(req.body);

@@ -12,6 +12,7 @@ venderInvestimentController.get('/vender', async (req: Request, res: Response) =
 
 venderInvestimentController.post(
   '/vender',
+  middleware.JoiInvestimento,
   middleware.quantidadeVendas,
   async (req: Request, res: Response) => {
     const { codCliente, codAtivo, qtAtivo } = req.body;
