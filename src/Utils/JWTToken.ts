@@ -8,7 +8,8 @@ const secret = process.env.JWT_SECRET || 'segredo';
 
 const jwtconfig: SignOptions = { algorithm: 'HS256' };
 
-const generationToken = (payload: Ilogin): string => sign(payload, secret, jwtconfig);
+const generationToken = (payload: Omit<Ilogin, 'senha'>)
+: string => sign(payload, secret, jwtconfig);
 
 const authenticateToken = (token: string) => verify(token, secret);
 

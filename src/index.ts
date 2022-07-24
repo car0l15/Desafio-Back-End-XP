@@ -1,15 +1,17 @@
 import express from 'express';
+import cors from 'cors';
 import routes from './routes';
-import middleware from './middleware';
+import httpErrorMiddleware from './middleware/errorHandler';
 
 const app = express();
+
+app.use(cors());
 
 app.use(express.json());
 
 app.use(routes);
 
-app.use(middleware.errorHandler);
-
+app.use(httpErrorMiddleware);
 const PORT = 3002;
 
 app.listen(PORT, () => console.log(

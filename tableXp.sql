@@ -49,3 +49,14 @@ INSERT INTO XpIncSchema.cliente_conta(codCliente, saldo) VALUES
 (2, 1099),
 (3, 3099),
 (4, 2500);
+
+INSERT INTO XpIncSchema.cliente_ativos(codCliente, codAtivo, qtAtivo) VALUES
+(1, 1, 40),
+(1, 5, 29),
+(2, 4, 22),
+(2, 2, 100),
+(3, 6, 18),
+(4, 3, 33),
+(5, 4, 41),
+(6, 1, 25),
+(6, 5, 102);
