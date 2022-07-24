@@ -4,15 +4,20 @@ import contaService from '../service/conta.service';
 
 const contaController = Router();
 
-contaController.post('/deposito', async (req:Request, res: Response) => {
-  const { codCliente, valor } = req.body;
-  const result = await contaService.deposito(codCliente, valor);
-  console.log(result, 'controller');
-  return res.status(201).json(result);
-});
+contaController.post(
+  '/deposito',
+  middleware.JoiValidateConta,
+  async (req:Request, res: Response) => {
+    const { codCliente, valor } = req.body;
+    const result = await contaService.deposito(codCliente, valor);
+    console.log(result, 'controller');
+    return res.status(201).json(result);
+  },
+);
 
 contaController.post(
   '/saque',
+  middleware.JoiValidateConta,
   middleware.saldo,
   async (req: Request, res: Response) => {
     const { codCliente, valor } = req.body;
