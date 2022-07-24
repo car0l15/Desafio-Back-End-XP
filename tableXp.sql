@@ -31,11 +31,21 @@ INSERT INTO XpIncSchema.ativos( tipo, valor, qtAtivo) VALUES
 ('CDB', 12.20, 400),
 ('SELIC', 10.13, 12000),
 ('CDI', 11.40, 550),
-('XPTO', 25.90, 2500);
+('XPTO', 25.90, 2500),
+('LCI', 22.30, 4000),
+('LCA', 18.00, 2000);
+
 
 INSERT INTO XpIncSchema.clientes (email, senha) VALUES 
 ('Martas@gmail.com', '12345678'),
 ('Carlossouza@hotmail.com', 'abcde12345'),
 ('eduardoBRI@yahoo.com', 'senhasenha'),
-('carol35@gmail.com', 'percy12355');
+('carol35@gmail.com', 'percy12355'),
+('felipe12@hotmail.com', '654321as'),
+('costaSilva12@yahoo.com', 'asdf1234');
 
+INSERT INTO XpIncSchema.cliente_conta(codCliente, saldo) VALUES 
+(1, 500.50 ),
+(2, 1099),
+(3, 3099),
+(4, 2500);
