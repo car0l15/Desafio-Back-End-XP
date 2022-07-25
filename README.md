@@ -1,18 +1,18 @@
 ## - Desafio-Back-end-XP
 
 Olá, este é o meu repositório do desafio da XpInc para a turma XP da trybe.
-Este é o código atual, porém ressalto que futaramente, após a avaliação teremos 
+Este é o código atual, porém ressalto que futuramente, após a avaliação teremos 
 atualizações e melhorias constantes.
 
 ## ⚔️  Objetivos do projeto
 
-Esta é uma API node com typescript, seu objetivo é simular um CRUD de ações comun
+Esta é uma API node com typescript, seu objetivo é simular um CRUD de ações comum
 na empresa XP-Inc, os desafios poderiam ser feitos de diversas formas, porém 
 respeitando os critérios estabelecidos para a criação da mesma.
 
 ## 🙂 Como fazer uso deste código?
 
-Basta entrar ir ao seu terminal e digitar o seguinte comando:
+Basta ir ao seu terminal e digitar o seguinte comando:
 
 - git clone git@github.com:car0l15/Desafio-Back-end-XP.git
 - cd Desafio-Back-end-XP
@@ -27,7 +27,7 @@ ex:
 - JWT_SECRET=segredo
 - PORT=3002
 
-## ➡️  Intruções para rotas e como consumir;
+## ➡️  Instruções para rotas e como consumir;
 
 - Rota para checar a lista de ativos </br>
 get/investimentos/comprar
@@ -62,7 +62,7 @@ get/ativos/cliente/identificador do cliente </br>
 
 a url da requisição deve seguir o exemplo:
 
-* ativos/clientes/4
+ ativos/clientes/4
 
 - Rota para checar um ativo por codAtivo (id) </br>
 get/ativos/ identificador do ativo
@@ -70,10 +70,10 @@ get/ativos/ identificador do ativo
 
 a url da requisição deve seguir o exemplo:
 
-* ativos/4
+ativos/4
 
 
-- Rota para simular um deposito na conta </br>
+- Rota para simular um depósito na conta </br>
 post/conta/deposito </br>
 
 exemplo do body da requisição:
@@ -94,12 +94,12 @@ exemplo do body da requisição:
 "valor": 555.30
 }
 
-- Rota para encontrar uma conta especifica pelo codCliente </br>
+- Rota para encontrar uma conta específica pelo codCliente </br>
 get/conta/identificador da conta
 
 a url da requisição deve seguir o exemplo:
 
-* conta/4
+ conta/4
 
 
 
