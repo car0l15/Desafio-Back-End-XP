@@ -2,14 +2,14 @@ import Investiment from '../interface/Investiment';
 import connection from './connection';
 
 const getAll = async () => {
-  const [rows] = await connection.execute('SELECT * FROM XpIncSchema.ativos');
+  const [rows] = await connection.execute('SELECT * FROM ativos');
   console.log(rows, 'model');
   return rows;
 };
 
 const verifyQuantity = async (codAtivo: number, qtAtivo: number) => {
   const [rows] = await connection.execute(
-    'SELECT qtAtivo FROM XpIncSchema.ativos WHERE codAtivo=?',
+    'SELECT qtAtivo FROM ativos WHERE codAtivo=?',
     [codAtivo],
   );
   const qtdAtivosTable = rows as Investiment[];
@@ -23,7 +23,7 @@ const verifyQuantity = async (codAtivo: number, qtAtivo: number) => {
 
 const buyAssets = async (Investimento: Investiment) => {
   const [rows] = await connection.execute(`
- INSERT INTO XpIncSchema.cliente_ativos (codCliente, codAtivo, qtAtivo) VALUES (?,?,?)
+ INSERT INTO cliente_ativos (codCliente, codAtivo, qtAtivo) VALUES (?,?,?)
  `, [Investimento.codCliente, Investimento.codAtivo, Investimento.qtAtivo]);
   return rows;
 };
