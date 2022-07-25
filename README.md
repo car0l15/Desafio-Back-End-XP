@@ -38,17 +38,6 @@ post/investimentos/comprar
 - Rota para verificar os ativos por clientes
 get/investimentos/vender
 
-## Rotas Bônus 🚀
-
-- Rota login
-post/login
-
-a rota login verifica se o usuário e senha já existem no DataBase,
-caso a resposta seja positiva é retornado um token de validação feito
-com JWT, a ideia é que no futuro somente pessoas autorizadas tenham
-acesso a essas rotas.
-
-
 - Rota para vender ativos
 vender/investimentos/vender
 
@@ -69,5 +58,10 @@ get/conta/identificador da conta
 
 ## Rotas Bônus
 
+- Rota login
+post/login
 
-
+a rota login verifica se o usuário e senha já existem no DataBase,
+caso a resposta seja positiva é retornado um token de validação feito
+com JWT, a ideia é que no futuro somente pessoas autorizadas tenham
+acesso a essas rotas.
