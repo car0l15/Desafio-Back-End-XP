@@ -29,6 +29,9 @@ contaController.post(
 contaController.get('/:id', async (req: Request, res: Response) => {
   const { id } = req.params;
   const result = await contaService.getContaById(Number(id));
+  if (result.length < 1) {
+    return res.status(404).json({ message: 'conta não encontrada' });
+  }
   return res.status(200).json(result[0]);
 });
 
