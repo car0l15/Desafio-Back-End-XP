@@ -2,7 +2,7 @@ import IQtAtivos from '../interface/qtAtivos';
 import connection from './connection';
 
 const getAll = async () => {
-  const [rows] = await connection.execute('SELECT * FROM investimento');
+  const [rows] = await connection.execute('SELECT * FROM cliente_ativos');
   console.log(rows, 'model');
   return rows;
 };
