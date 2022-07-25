@@ -29,31 +29,31 @@ ex:
 
 ## ➡️  Intruções para rotas e como consumir;
 
-- Rota para checar a lista de ativos 
+- Rota para checar a lista de ativos </br>
 get/investimentos/comprar
 
 - Rota para comprar ativos </br>
 post/investimentos/comprar
 
-- Rota para verificar os ativos por clientes
+- Rota para verificar os ativos por clientes </br>
 get/investimentos/vender
 
-- Rota para vender ativos
+- Rota para vender ativos </br>
 investimentos/vender
 
-- Rota para checar um cliente e seus ativos por codCliente (id)
+- Rota para checar um cliente e seus ativos por codCliente (id) </br>
 get/ativos/cliente/identificador do cliente
 
-- Rota para checar um ativo por codAtivo (id)
+- Rota para checar um ativo por codAtivo (id) </br>
 get/ativos/ identificador do ativo
 
-- Rota para simular um deposito na conta
+- Rota para simular um deposito na conta </br>
 post/conta/deposito
 
-- Rota para simular um saque
+- Rota para simular um saque </br>
 post/conta/saque
 
-- Rota para encontrar uma conta especifica pelo codCliente
+- Rota para encontrar uma conta especifica pelo codCliente </br>
 get/conta/identificador da conta
 
 ## Rotas Bônus 🚀
@@ -61,7 +61,7 @@ get/conta/identificador da conta
 - Rota login
 post/login
 
-a rota login verifica se o usuário e senha já existem no DataBase,
-caso a resposta seja positiva é retornado um token de validação feito
-com JWT, a ideia é que no futuro somente pessoas autorizadas tenham
+a rota login verifica se o usuário e senha já existem no DataBase, </br>
+caso a resposta seja positiva é retornado um token de validação feito </br>
+com JWT, a ideia é que no futuro somente pessoas autorizadas tenham </br>
 acesso a essas rotas.
