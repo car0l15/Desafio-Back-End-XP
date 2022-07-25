@@ -33,33 +33,87 @@ ex:
 get/investimentos/comprar
 
 - Rota para comprar ativos </br>
-post/investimentos/comprar
+post/investimentos/comprar </br>
+
+exemplo do body da requisição:
+
+{
+"codCliente": 1,
+"codAtivo": 2,
+"qtAtivo": 40
+}
 
 - Rota para verificar os ativos por clientes </br>
 get/investimentos/vender
 
 - Rota para vender ativos </br>
-investimentos/vender
+investimentos/vender </br>
+
+exemplo do body da requisição:
+
+{
+"codCliente": 1,
+"codAtivo": 2,
+"qtAtivo": 40
+}
 
 - Rota para checar um cliente e seus ativos por codCliente (id) </br>
-get/ativos/cliente/identificador do cliente
+get/ativos/cliente/identificador do cliente </br>
+
+a url da requisição deve seguir o exemplo:
+
+* ativos/clientes/4
 
 - Rota para checar um ativo por codAtivo (id) </br>
 get/ativos/ identificador do ativo
 
+
+a url da requisição deve seguir o exemplo:
+
+* ativos/4
+
+
 - Rota para simular um deposito na conta </br>
-post/conta/deposito
+post/conta/deposito </br>
+
+exemplo do body da requisição:
+
+{
+"codCliente": 4,
+"valor": 555.30
+}
+
 
 - Rota para simular um saque </br>
 post/conta/saque
 
+exemplo do body da requisição:
+
+{
+"codCliente": 4,
+"valor": 555.30
+}
+
 - Rota para encontrar uma conta especifica pelo codCliente </br>
 get/conta/identificador da conta
+
+a url da requisição deve seguir o exemplo:
+
+* conta/4
+
+
 
 ## Rotas Bônus 🚀
 
 - Rota login
 post/login
+
+exemplo do body da requisição:
+
+{
+"email": "email@email.com"
+"senha": "123456"
+}
 
 a rota login verifica se o usuário e senha já existem no DataBase, </br>
 caso a resposta seja positiva é retornado um token de validação feito </br>
