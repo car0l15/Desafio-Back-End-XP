@@ -39,7 +39,7 @@ post/investimentos/comprar
 get/investimentos/vender
 
 - Rota para vender ativos
-vender/investimentos/vender
+investimentos/vender
 
 - Rota para checar um cliente e seus ativos por codCliente (id)
 get/ativos/cliente/identificador do cliente
