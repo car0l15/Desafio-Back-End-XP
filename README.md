@@ -32,7 +32,7 @@ ex:
 - Rota para checar a lista de ativos 
 get/investimentos/comprar
 
--Rota para comprar uma aplicação
+- Rota para comprar ativos
 post/investimentos/comprar
 
 - Rota para verificar os ativos por clientes
