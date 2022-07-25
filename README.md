@@ -20,12 +20,12 @@ Basta entrar ir ao seu terminal e digitar o seguinte comando:
 conforme o exemplo abaixo e pronto!
 
 ex: 
-MYSQL_HOST=localhost
-MYSQL_USER=Seuser
-MYSQL_PASSWORD=Suapassword
-MYSQL_DATABASE=XpIncSchema
-JWT_SECRET=segredo
-PORT=3002
+- MYSQL_HOST=localhost
+- MYSQL_USER=Seuser
+- MYSQL_PASSWORD=Suapassword
+- MYSQL_DATABASE=XpIncSchema
+- JWT_SECRET=segredo
+- PORT=3002
 
 ## ➡️  Intruções para rotas e como consumir;
 
