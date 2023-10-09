@@ -3,7 +3,7 @@ import connection from './connection';
 
 const getAll = async () => {
   const [rows] = await connection.execute('SELECT * FROM ativos');
-  console.log(rows, 'model');
+
   return rows;
 };
 
@@ -15,8 +15,6 @@ const verifyQuantity = async (codAtivo: number, qtAtivo: number) => {
   const qtdAtivosTable = rows as Investiment[];
 
   const quantidade = qtdAtivosTable[0].qtAtivo;
-
-  console.log(qtAtivo, quantidade, 'model');
 
   return quantidade;
 };

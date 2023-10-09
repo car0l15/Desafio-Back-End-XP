@@ -3,7 +3,7 @@ import connection from './connection';
 
 const getAll = async () => {
   const [rows] = await connection.execute('SELECT * FROM cliente_ativos');
-  console.log(rows, 'model');
+ 
   return rows;
 };
 
@@ -23,8 +23,6 @@ const insertAssets = async (codCliente: number, codAtivo: number, qtAtivos: numb
     'INSERT INTO cliente_ativos (codCliente, codAtivo, qtAtivo) VALUES(?, ?, ?)',
     [codCliente, codAtivo, qtAtivos],
   );
-
-  console.log(rowsInsert);
 
   return {
     codCliente,

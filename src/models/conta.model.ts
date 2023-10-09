@@ -23,8 +23,6 @@ const saque = async (codCliente: number, valor: number) => {
    INSERT INTO cliente_conta (codCliente, saldo) VALUES (?, ?)
    `, [codCliente, valor]);
 
-  console.log(rows);
-
   return {
     codCliente,
     saldo: valor,

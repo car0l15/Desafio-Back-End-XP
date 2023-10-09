@@ -8,7 +8,6 @@ const getAll = async () => {
 
 const verifyQuantity = async (codAtivo: number, qtAtivo: number) => {
   const quantidade = await comprarInvestimentModel.verifyQuantity(codAtivo, qtAtivo);
-  console.log(quantidade, 'service');
 
   if (qtAtivo > quantidade) {
     return 'quantidade indisponível';

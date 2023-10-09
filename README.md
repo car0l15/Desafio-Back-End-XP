@@ -14,8 +14,9 @@ Basta ir ao seu terminal e digitar o seguinte comando:
 
 - git clone git@github.com:car0l15/Desafio-Back-end-XP.git
 - cd Desafio-Back-End-XP
-- no terminal realizar o comando npm install e executar suas variáveis de ambiente
-conforme o exemplo abaixo e pronto!
+- no terminal realizar o comando npm install e executar suas variáveis de ambiente.
+
+Siga o exemplo abaixo
 
 ex: 
 - MYSQL_HOST=localhost
