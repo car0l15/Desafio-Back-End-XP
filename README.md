@@ -8,7 +8,7 @@ Esta é uma API node com typescript, seu objetivo é simular um CRUD de ações 
 em empresas bancárias, os desafios poderiam ser feitos de diversas formas, porém 
 respeitando os critérios estabelecidos para a criação da mesma.
 
-## 🙂 Como fazer uso deste código?
+## 🌿 Como fazer uso deste código?
 
 Basta ir ao seu terminal e digitar o seguinte comando:
 
