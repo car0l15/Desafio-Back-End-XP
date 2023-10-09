@@ -29,8 +29,3 @@ describe('testa a função que verifica o saldo', async () => {
       })
   });
 });
-
-
-// describe('testa a função que traz o saque do cliente', async () => {
-//   describe('Em caso de sucesso')
-// });

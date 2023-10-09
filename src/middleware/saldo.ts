@@ -9,14 +9,14 @@ const verificaSaque = async (req: Request, res: Response, next: NextFunction) =>
 
   const msg = 'código da conta incorreto, por favor tente novamente';
 
-  const msg2 = 'saldo insuficiente';
+  const mensagem = 'saldo insuficiente';
 
   if (result === 'código do cliente incorreto') {
     return res.status(404).json({ message: msg });
   }
 
   if (result === 'saldo insuficiente') {
-    return res.status(404).json({ message: msg2 });
+    return res.status(404).json({ message: mensagem });
   }
 
   return next();

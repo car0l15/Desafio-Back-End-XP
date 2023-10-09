@@ -3,8 +3,6 @@ import exp from 'constants';
 import sinon from 'sinon';
 import contaModel from '../src/models/conta.model';
 
-// eslint-disable-next-line max-lines-per-function
-
 describe('Buscando pela conta do cliente pelo id passado', async () => {
    describe('Em caso de sucesso na busca', () => {
       const conta = [{

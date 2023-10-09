@@ -23,7 +23,6 @@ const investimentoValidation = (req: Request, res: Response, next: NextFunction)
     return next();
   }
 
-  // console.log(error.message, 'error');
   if (error.message.includes('obrigatório')) {
     return res.status(400).json({ message: error.message });
   }

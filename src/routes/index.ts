@@ -18,5 +18,3 @@ routers.use('/conta', contaController);
 routers.use('/login', loginController);
 
 export default routers;
-
-// mid para saber se o codCliente existe
