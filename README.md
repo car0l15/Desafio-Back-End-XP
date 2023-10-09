@@ -26,6 +26,20 @@ ex:
 - JWT_SECRET=segredo
 - PORT=3002
 
+## Tecnologias Utilizadas
+
+- Express
+- Express Async Errors
+- Joi
+- JsonWebToken
+- MySql2,
+- Mocha
+- Sinon
+- Eslint
+- Nodemon
+- Docker
+
+
 ## ➡️  Instruções para rotas e como consumir;
 
 - Rota para checar a lista de ativos </br>
