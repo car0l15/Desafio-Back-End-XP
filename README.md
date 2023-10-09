@@ -1,13 +1,11 @@
 ## - Desafio-Back-end-XP
 
-Olá, este é o meu repositório do desafio da XpInc para a turma XP da trybe.
-Este é o código atual, porém ressalto que futuramente, após a avaliação teremos 
-atualizações e melhorias constantes.
+Este repositório contém o desafio técnico que realizei para ingressar na empresa XP-Inc
 
 ## ⚔️  Objetivos do projeto
 
-Esta é uma API node com typescript, seu objetivo é simular um CRUD de ações comum
-na empresa XP-Inc, os desafios poderiam ser feitos de diversas formas, porém 
+Esta é uma API node com typescript, seu objetivo é simular um CRUD de ações comuns
+em empresas bancárias, os desafios poderiam ser feitos de diversas formas, porém 
 respeitando os critérios estabelecidos para a criação da mesma.
 
 ## 🙂 Como fazer uso deste código?
@@ -15,14 +13,14 @@ respeitando os critérios estabelecidos para a criação da mesma.
 Basta ir ao seu terminal e digitar o seguinte comando:
 
 - git clone git@github.com:car0l15/Desafio-Back-end-XP.git
-- cd Desafio-Back-end-XP
+- cd Desafio-Back-End-XP
 - no terminal realizar o comando npm install e executar suas variáveis de ambiente
 conforme o exemplo abaixo e pronto!
 
 ex: 
 - MYSQL_HOST=localhost
 - MYSQL_USER=Seuser
-- MYSQL_PASSWORD=Suapassword
+- MYSQL_PASSWORD=Seapassword
 - MYSQL_DATABASE=XpIncSchema
 - JWT_SECRET=segredo
 - PORT=3002
@@ -101,8 +99,6 @@ a url da requisição deve seguir o exemplo:
 
  conta/4
 
-
-
 ## Rotas Bônus 🚀
 
 - Rota login
@@ -117,5 +113,5 @@ exemplo do body da requisição:
 
 a rota login verifica se o usuário e senha já existem no DataBase, </br>
 caso a resposta seja positiva é retornado um token de validação feito </br>
-com JWT, a ideia é que no futuro somente pessoas autorizadas tenham </br>
+com JWT, a ideia é que em um ambiente real somente pessoas autorizadas tenham </br>
 acesso a essas rotas.
